@@ -1,7 +1,13 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <input type="text" v-model="username" placeholder="用户名">
+    <input type="text" v-model="password" placeholder="密码">
+    <p @click="login">提交</p>
+
+    <p style="color: red">
+      {{token}}
+      {{msg}}
+    </p>
   </div>
 </template>
 
@@ -9,18 +15,30 @@
 export default {
   name: 'App',
   data(){
-    return{}
+    return{
+      username:'',
+      password:'',
+      token:'',
+      msg:''
+    }
   },
   methods:{
-    getdata(){
-      this.$api.get('test',{})
+    login(){
+      let _this=this;
+      this.$api.post('login',{username:this.username,password:this.password})
         .then(function (res) {
-          console.log(res)
+          if(res.code==200){
+            _this.token=res.token
+            _this.msg=res.msg
+          }else{
+            console.log(res)
+            _this.msg=res.msg
+          }
         })
     }
   },
   mounted(){
-    this.getdata()
+
   }
 }
 </script>

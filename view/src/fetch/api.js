@@ -4,7 +4,7 @@ import store from '../store';
 import {router,routerGo} from '../router';
 import Qs from 'qs'
 
-let base='http://192.168.0.85:5000/'
+let base='http://192.168.0.85:9001/'
 
 let instance=axios.create({
   baseURL: base,
@@ -86,9 +86,6 @@ function apiAxios (method, url, params, success, failure) {
         localStorage.removeItem("user");
         routerGo('login');
 
-        return false
-      } if (res.data.code == 201) {
-        //Message.error(res.data.message);
         return false
       }else {
         return res.data
