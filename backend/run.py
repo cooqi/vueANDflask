@@ -1,4 +1,4 @@
-
+#coding:utf-8
 '''
     render_template 是渲染模板用的，这里我们用来返回 index.html
     flask_cors 用来解决跨域的问题

@@ -75,6 +75,7 @@ export default {
         .then(function (res) {
           if(res.code==200){
             _this.reg_msg=res.msg
+            _this.userList()
           }else{
             console.log(res)
             _this.reg_msg=res.msg

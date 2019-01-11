@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27f3f67b-0ce2-4b6e-8af8-271bad4c775c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/YMLS/listDel.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/YMLS/listEdit.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YMLS/userList.yml" beforeDir="false" afterPath="$PROJECT_DIR$/YMLS/userList.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../view/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../view/src/App.vue" afterDir="false" />
     </list>
@@ -20,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="81" column="21" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="21" />
+            <state relative-caret-position="380">
+              <caret line="38" selection-start-line="38" selection-end-line="39" />
               <folding>
                 <element signature="e#129#230#0" expanded="true" />
               </folding>
@@ -54,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
-              <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+              <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -83,19 +80,19 @@
         <option value="$PROJECT_DIR$/color.yml" />
         <option value="$PROJECT_DIR$/login.yml" />
         <option value="$PROJECT_DIR$/readme.md" />
-        <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/YMLS/login.yml" />
         <option value="$PROJECT_DIR$/YMLS/register.yml" />
         <option value="$PROJECT_DIR$/YMLS/userList.yml" />
         <option value="$PROJECT_DIR$/YMLS/listDel.yml" />
-        <option value="$PROJECT_DIR$/run.py" />
         <option value="$PROJECT_DIR$/YMLS/listEdit.yml" />
+        <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/run.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="526" />
-    <option name="y" value="37" />
+    <option name="x" value="621" />
+    <option name="y" value="13" />
     <option name="width" value="973" />
     <option name="height" value="820" />
   </component>
@@ -167,18 +164,17 @@
       <updated>1547016481975</updated>
       <workItem from="1547016484065" duration="9793000" />
       <workItem from="1547080777818" duration="22515000" />
-      <workItem from="1547166996279" duration="2544000" />
+      <workItem from="1547166996279" duration="4769000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34852000" />
+    <option name="totallyTimeSpent" value="37077000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="526" y="37" width="973" height="820" extended-state="0" />
-    <editor active="true" />
+    <frame x="621" y="13" width="973" height="820" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26067907" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26067907" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -192,7 +188,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.30422124" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.30422124" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -227,13 +223,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/YMLS/userList.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -265,10 +254,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="81" column="21" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="21" />
+        <state relative-caret-position="380">
+          <caret line="38" selection-start-line="38" selection-end-line="39" />
           <folding>
             <element signature="e#129#230#0" expanded="true" />
           </folding>
