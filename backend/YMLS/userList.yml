@@ -1,0 +1,25 @@
+用户列表
+    ---
+    tags:
+      - user API
+    parameters:
+      - name: page_index
+        type: string
+        required: true
+        description: 当前页数
+      - name: page_size
+        type: string
+        required: true
+        description: 当前页显示条数
+      - name: keyword
+        type: string
+        required: false
+        description: 关键词
+    responses:
+      201:
+        description: 失败!
+      200:
+        description: 成功
+        examples:
+          Data: "{code:200,data:[],msg:'',pageIndex:1,total:1}"
+
