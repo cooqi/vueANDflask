@@ -1,7 +1,7 @@
 用户列表
     ---
     tags:
-      - user API
+      - LIST API
     parameters:
       - name: page_index
         type: string

@@ -46,7 +46,7 @@ def home():
     return render_template('index.html')
 
 
-@APP.route('/userList', methods=['get'])
+@APP.route('/userList', methods=['GET'])
 @swag_from('YMLS/userList.yml')
 def userList():
     keyword = request.args.get('keyword',default='')
@@ -66,6 +66,31 @@ def userList():
         t={'code': 200, 'data': payload, 'msg': '','pageIndex':page_index,'total':len(payload)}
         return jsonify(t)
     return jsonify({'code': 201,  'msg': '请求失败'})
+
+@APP.route('/listDel', methods=['POST'])
+@swag_from('YMLS/listDel.yml')
+def delList():
+    id=request.form.get('id')
+    user = User.query.filter(User.id == id).first()  # 作查询，并判断
+    if user:
+        db.session.delete(user)  # 执行操作
+        db.session.commit()
+        return jsonify({'code': 200, 'msg': '删除成功'})
+    else:
+        return jsonify({'code': 201, 'msg': 'id不存在'})
+
+@APP.route('/listEdit', methods=['POST'])
+@swag_from('YMLS/listEdit.yml')
+def listEdit():
+    username=request.form.get('username')
+    id = request.form.get('id')
+    user = User.query.filter(User.id == id).first()  # 作查询，并判断
+    if user:
+        user.username = username
+        db.session.commit()
+        return jsonify({'code': 200, 'msg': '编辑成功'})
+    else:
+        return jsonify({'code': 201, 'msg': '编辑失败'})
 
 @APP.route('/register', methods=['POST'])
 @swag_from('YMLS/register.yml')

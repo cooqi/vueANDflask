@@ -1,0 +1,21 @@
+用户列表编辑
+    ---
+    tags:
+      - LIST API
+    parameters:
+      - name: id
+        type: string
+        required: true
+        description: 列表id
+      - name: username
+        type: string
+        required: true
+        description: 新编辑的用户名
+    responses:
+      201:
+        description: 失败!
+      200:
+        description: 成功
+        examples:
+          Data: "{code:200,data:{},msg:'编辑成功',}"
+

@@ -1,0 +1,17 @@
+用户列表删除
+    ---
+    tags:
+      - LIST API
+    parameters:
+      - name: id
+        type: string
+        required: true
+        description: 列表id
+    responses:
+      201:
+        description: 失败!
+      200:
+        description: 成功
+        examples:
+          Data: "{code:200,data:{},msg:'删除成功',}"
+

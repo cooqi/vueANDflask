@@ -25,8 +25,13 @@
     <div class="list">
       <input type="text" v-model="keyword"><button @click="search">查询</button>
       <ul>
-        <li v-for="item in user">{{item.id}}-{{item.username}}-{{item.time}}</li>
+        <li v-for="item in user">{{item.id}}-{{item.username}}-{{item.time}} <span class="del" @click="del(item.id)">删除</span> <span class="edit" @click="editPop(item.id,item.username)">编辑</span></li>
       </ul>
+
+      <div class="editbox" v-show="popEdit">
+        <input type="text" v-model="editName">
+        <button @click="edit">确定</button>
+      </div>
     </div>
   </div>
 </template>
@@ -44,7 +49,10 @@ export default {
       res_name:'',
       res_password:'',
       user:[],
-      keyword:''
+      keyword:'',
+      popEdit:false,
+      editName:'',
+      editID:''
     }
   },
   methods:{
@@ -92,6 +100,34 @@ export default {
     },
     search(){
       this.userList()
+    },
+    del(id){
+      let _this=this
+      this.$api.post('listDel',{id:id})
+        .then(function (res) {
+          if(res.code==200){
+            _this.userList()
+          }else{
+            console.log(res)
+          }
+        })
+    },
+    editPop(id,name){
+      this.popEdit=true
+      this.editName=name
+      this.editID=id
+    },
+    edit(){
+      let _this=this
+      this.$api.post('listEdit',{id:this.editID,username:this.editName})
+        .then(function (res) {
+          if(res.code==200){
+            _this.userList()
+            _this.popEdit=false
+          }else{
+            console.log(res)
+          }
+        })
     }
   },
   mounted(){
@@ -113,4 +149,6 @@ export default {
   .register{background: orangered;padding: 20px;color: #fff;}
   .list{background: #ccc;padding: 20px;margin: 20px auto}
 .list li,.list ul{list-style: none;padding: 0;text-align: left}
+  .del{color: red;cursor: pointer;margin-left: 20px;}
+  .edit{color: blue;cursor: pointer;margin-left: 20px;}
 </style>
